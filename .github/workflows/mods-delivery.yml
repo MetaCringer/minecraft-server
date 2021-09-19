@@ -11,5 +11,6 @@ jobs:
       USER_DELIVERY: ${{ secrets.USER_DELIVERY }}
       KEY_DELIVERY: ${{ secrets.KEY_DELIVERY }}
     steps:
-      - name: Deliver mods
-        run: .github/scripts/deliver-mods.sh
+    - uses: actions/checkout@v2
+    - name: Deliver mods
+      run: .github/scripts/deliver-mods.sh

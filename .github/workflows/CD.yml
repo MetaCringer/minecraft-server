@@ -11,6 +11,6 @@ jobs:
       USER_DELIVERY: ${{ secrets.USER_DELIVERY }}
       KEY_DELIVERY: ${{ secrets.KEY_DELIVERY }}
     steps:
-      - uses: actions/checkout@v2
-      - name: Run a one-line script
-        run: .github/scripts/deploy.sh
+    - uses: actions/checkout@v2
+    - name: Run a one-line script
+      run: .github/scripts/deploy.sh

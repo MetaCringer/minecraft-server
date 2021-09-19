@@ -1,5 +1,5 @@
 #!/bin/bash
-tar -pczvf mods.tar.gz ./mods/*
+cd mods && tar -pczvf ../mods.tar.gz ./* && cd ../
 echo "host is ${HOST_DELIVERY}"
 echo ${KEY_DELIVERY} | base64 -d > key.pem
 chmod 600 key.pem

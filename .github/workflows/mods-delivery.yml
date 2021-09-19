@@ -13,4 +13,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Deliver mods
-      run: .github/scripts/deliver-mods.sh
+      run: ./.github/scripts/deliver-mods.sh

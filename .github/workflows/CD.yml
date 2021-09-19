@@ -13,4 +13,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run a one-line script
-      run: .github/scripts/deploy.sh
+      run: ./.github/scripts/deploy.sh

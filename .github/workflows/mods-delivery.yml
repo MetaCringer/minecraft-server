@@ -1,0 +1,15 @@
+
+name: mods-delivery
+
+on:
+  workflow_dispatch:
+jobs:
+  delivery:
+    runs-on: ubuntu-latest
+    env:
+      HOST_DELIVERY: ${{ secrets.HOST_DELIVERY }}
+      USER_DELIVERY: ${{ secrets.USER_DELIVERY }}
+      KEY_DELIVERY: ${{ secrets.KEY_DELIVERY }}
+    steps:
+      - name: Deliver mods
+        run: .github/scripts/deliver-mods.sh

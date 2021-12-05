@@ -1,5 +1,5 @@
 #!/bin/bash
-tar -pczvf package.tar.gz --exclude=".github/*" --exclude=".env" --exclude="LICENSE" --exclude="README.md" --exclude=".gitignore" --exclude="script/*" ./*
+tar -pczvf package.tar.gz --exclude=".github/*" --exclude=".env" --exclude="LICENSE" --exclude="README.md" --exclude=".gitignore" ./*
 echo "host is ${HOST_DELIVERY}"
 echo ${KEY_DELIVERY} | base64 -d > key.pem
 chmod 600 key.pem

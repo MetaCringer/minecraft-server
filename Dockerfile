@@ -16,4 +16,5 @@ ADD mods/* mods/
 ADD server.properties server.properties
 #cmd sleep 10000000000
 ENV mx_ram=3g
+EXPOSE 25565
 ENTRYPOINT ["./docker-entrypoint.sh"]

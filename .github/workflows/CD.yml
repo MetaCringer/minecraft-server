@@ -10,7 +10,16 @@ jobs:
       HOST_DELIVERY: ${{ secrets.HOST_DELIVERY }}
       USER_DELIVERY: ${{ secrets.USER_DELIVERY }}
       KEY_DELIVERY: ${{ secrets.KEY_DELIVERY }}
+
     steps:
     - uses: actions/checkout@v2
+    - name: create env file
+      run: |
+          touch .env
+          echo HOST_DELIVERY=${{ secrets.HOST_DELIVERY }} >> .env
+          echo USER_DELIVERY=${{ secrets.USER_DELIVERY }} >> .env
+          echo KEY_DELIVERY=${{ secrets.KEY_DELIVERY }} >> .env
+          echo PATH_DELIVERY=${{ secrets.PATH_DELIVERY }} >> .env
+          cat .env
     - name: Run a one-line script
-      run: ./.github/scripts/deploy.sh
+      run: docker-compose up 

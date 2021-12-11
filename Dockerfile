@@ -14,7 +14,8 @@ WORKDIR /app
 ADD eula.txt eula.txt
 ADD mods/* mods/
 ADD server.properties server.properties
+ADD ./.github/scripts/* /scripts/
+RUN apt update -y && apt install -y ssh
+
 #cmd sleep 10000000000
-ENV mx_ram=3g
-EXPOSE 25565
 ENTRYPOINT ["./docker-entrypoint.sh"]

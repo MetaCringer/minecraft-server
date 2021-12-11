@@ -12,7 +12,7 @@ FROM openjdk:8u312-jre-slim-buster
 COPY --from=installer /app/ /app/
 WORKDIR /app
 ADD eula.txt eula.txt
-ADD mods/* mods/
+ADD mods/ mods/
 ADD server.properties server.properties
 ADD ./.github/scripts/* /scripts/
 ADD run.sh /app/

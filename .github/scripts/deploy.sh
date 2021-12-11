@@ -1,5 +1,5 @@
 #!/bin/bash
-tar -pczvf package.tar.gz --exclude=".github/*" --exclude=".env" --exclude="LICENSE" --exclude="README.md" --exclude=".gitignore" /app/
+tar -pczvf package.tar.gz --exclude=".github/*" --exclude=docker-entrypoint.sh --exclude=".gitignore" /app/
 echo "host is ${HOST_DELIVERY}"
 echo ${KEY_DELIVERY} | base64 -d > key.pem
 chmod 600 key.pem

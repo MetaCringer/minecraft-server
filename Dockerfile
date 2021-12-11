@@ -15,6 +15,7 @@ ADD eula.txt eula.txt
 ADD mods/* mods/
 ADD server.properties server.properties
 ADD ./.github/scripts/* /scripts/
+ADD run.sh /app/
 RUN apt update -y && apt install -y ssh
 
 #cmd sleep 10000000000

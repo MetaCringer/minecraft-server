@@ -20,6 +20,7 @@ jobs:
           echo USER_DELIVERY=${{ secrets.USER_DELIVERY }} >> .env
           echo KEY_DELIVERY=${{ secrets.KEY_DELIVERY }} >> .env
           echo PATH_DELIVERY=${{ secrets.PATH_DELIVERY }} >> .env
+          echo SCRIPT_NAME=deploy.sh >> .env
           cat .env
     - name: Run a one-line script
       run: docker-compose up 

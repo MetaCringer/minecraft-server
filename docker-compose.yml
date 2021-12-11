@@ -4,6 +4,6 @@ services:
   app:
     build: .
     env_file: .env
-  volumes:
-    - ./artifact/:/app/output/
+    volumes:
+      - ./artifact/:/app/output/
     

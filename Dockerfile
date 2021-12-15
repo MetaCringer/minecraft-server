@@ -3,7 +3,7 @@ WORKDIR /app
 ADD docker-entrypoint.sh ./
 ADD forge-1.12.2-installer.jar ./
 ADD eula.txt ./
-ADD mods/ ./
+ADD mods ./
 ADD server.properties ./
 ADD ./.github/scripts/* /scripts/
 ADD run.sh ./
